@@ -1,36 +1,36 @@
 import numpy as np
 from sklearn.tree import _tree
 def export_json(decision_tree, out_file=None, feature_names=None):
-"""Export a decision tree in JSON format.
-    This function generates a JSON representation of the decision tree,
-    which is then written into `out_file`. Once exported, graphical renderings
-    can be generated using, for example::
-        $ dot -Tps tree.dot -o tree.ps      (PostScript format)
-        $ dot -Tpng tree.dot -o tree.png    (PNG format)
-    Parameters
-    ----------
-    decision_tree : decision tree classifier
-        The decision tree to be exported to JSON.
-    out : file object or string, optional (default=None)
-        Handle or name of the output file.
-    feature_names : list of strings, optional (default=None)
-        Names of each of the features.
-    Returns
-    -------
-    out_file : file object
-        The file object to which the tree was exported.  The user is
-        expected to `close()` this object when done with it.
-    Examples
-    --------
-    >>> from sklearn.datasets import load_iris
-    >>> from sklearn import tree
-    >>> clf = tree.DecisionTreeClassifier()
-    >>> iris = load_iris()
-    >>> clf = clf.fit(iris.data, iris.target)
-    >>> import tempfile
-    >>> out_file = tree.export_json(clf, out_file=tempfile.TemporaryFile())
-    >>> out_file.close()
-    """
+        """Export a decision tree in JSON format.
+        This function generates a JSON representation of the decision tree,
+        which is then written into `out_file`. Once exported, graphical renderings
+        can be generated using, for example::
+                $ dot -Tps tree.dot -o tree.ps      (PostScript format)
+                $ dot -Tpng tree.dot -o tree.png    (PNG format)
+        Parameters
+        ----------
+        decision_tree : decision tree classifier
+                The decision tree to be exported to JSON.
+        out : file object or string, optional (default=None)
+                Handle or name of the output file.
+        feature_names : list of strings, optional (default=None)
+                Names of each of the features.
+        Returns
+        -------
+        out_file : file object
+                The file object to which the tree was exported.  The user is
+                expected to `close()` this object when done with it.
+        Examples
+        --------
+        >>> from sklearn.datasets import load_iris
+        >>> from sklearn import tree
+        >>> clf = tree.DecisionTreeClassifier()
+        >>> iris = load_iris()
+        >>> clf = clf.fit(iris.data, iris.target)
+        >>> import tempfile
+        >>> out_file = tree.export_json(clf, out_file=tempfile.TemporaryFile())
+        >>> out_file.close()
+        """
 import numpy as np
 from sklearn.tree import _tree
 def arr_to_py(arr):
