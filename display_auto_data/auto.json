@@ -1,0 +1,41 @@
+[
+    {
+      "car name": "chevrolet chevelle malibu",
+      "miles": {
+         "gallon": 18
+      },
+      "cylinders": 8,
+      "displacement": 307,
+      "horsepower": 130,
+      "weight": 3504,
+      "acceleration": 12,
+      "model year": 70,
+      "origin": 1
+   },
+    {
+      "car name": "buick skylark 320",
+      "miles": {
+         "gallon": 15
+      },
+      "cylinders": 8,
+      "displacement": 350,
+      "horsepower": 165,
+      "weight": 3693,
+      "acceleration": 11.5,
+      "model year": 70,
+      "origin": 1
+   },
+    {
+      "car name": "plymouth satellite",
+      "miles": {
+         "gallon": 18
+      },
+      "cylinders": 8,
+      "displacement": 318,
+      "horsepower": 150,
+      "weight": 3436,
+      "acceleration": 11,
+      "model year": 70,
+      "origin": 1
+   }
+   ]

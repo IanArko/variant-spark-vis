@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+</head>
+<body>
+    <div id="viz"></div>
+    <script type="text/javascript">
+
+        //d3.text("auto_mpg_tmp.json", function(datasetText) {
+        //var parsedCSV = d3.csv.parseRows(datasetText);
+
+        d3.json(this.value + ".json", load_dataset);
+        d3.selectAll("option")
+            .data([
+                "-",
+                "auto"
+            ])
+            .enter().append("option")
+                .attr("value", String)
+                .text(String);
+
+    function load_dataset(json) {
+        root = json;
+        root.x0 = 0;
+        root.y0 = 0;
+
+        var n_samples = root.samples;
+        var n_labels = root.value.length;
+
+        if (n_labels >= 2) {
+            stroke_callback = mix_colors;
+        } else if (n_labels === 1) {
+            stroke_callback = mean_interpolation(root);
+        }
+
+        var sampleHTML = d3.select("#viz")
+            .append("table")
+            .style("border-collapse", "collapse")
+            .style("border", "2px black solid")
+
+            .selectAll("tr")
+            .data(parsedCSV)
+            .enter().append("tr")
+
+            .selectAll("td")
+            .data(function(d){return d;})
+            .enter().append("td")
+            .style("border", "1px black solid")
+            .style("padding", "5px")
+            .on("mouseover", function(){d3.select(this).style("background-color", "aliceblue")})
+            .on("mouseout", function(){d3.select(this).style("background-color", "white")})
+            .text(function(d){return d;})
+            .style("font-size", "12px");
+});
+  
+    
+    </script>
+</body>
+</html>
