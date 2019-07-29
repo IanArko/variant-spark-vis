@@ -1,5 +1,8 @@
 # VariantSpark Visualization
 
+This repo is to collect code, examples, links... in our work to create a dynamic visualization for CSIRO's VariantSpark -- wide Random Forests for genomic (and other wide) data classication.
+- :octocat: Link to [VariantSpark](https://github.com/aehrc/VariantSpark) source code
+
 ### Links
 
 - This is an example of the [goal](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/) state for for this project -> animated visualization of machine learning for random forests using D3
